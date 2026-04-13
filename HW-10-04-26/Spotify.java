@@ -123,7 +123,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 				
 			}
@@ -136,7 +136,7 @@ class Spotify{
 				System.out.println("5.ORU POIYAVATHU SOL");
 				
 				System.out.print("CHOOSE FROM ABOVE LIST: ");
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 		
 					
 				if(play == 1)
@@ -161,7 +161,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			}
 		}
@@ -204,7 +204,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			}
 			
@@ -217,7 +217,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -237,7 +237,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			}
 			else if(options == 3)
@@ -249,9 +249,9 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
-					if(play == 1)
+				if(play == 1)
 				{
 					System.out.println("VELAI ILLA PATTATHARI....");
 				}
@@ -269,7 +269,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 				
 			}
@@ -282,9 +282,9 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
-					if(play == 1)
+				if(play == 1)
 				{
 					System.out.println("PORKANDA SINGAM....");
 				}
@@ -302,7 +302,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			} 
 
@@ -326,7 +326,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -350,7 +350,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			}
 			
@@ -363,7 +363,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -383,7 +383,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			}
 			else if(options == 3)
@@ -395,7 +395,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -415,7 +415,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 				
 			}
@@ -438,7 +438,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -458,7 +458,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}	
 			}
 			
@@ -471,7 +471,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -491,7 +491,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			}
 			else if(options == 3)
@@ -503,7 +503,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -523,7 +523,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 				
 			}
@@ -548,7 +548,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -568,7 +568,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			}
 			
@@ -581,7 +581,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -601,7 +601,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 			}
 			else if(options == 3)
@@ -613,7 +613,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -633,7 +633,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 				
 			}
@@ -646,7 +646,7 @@ class Spotify{
 				
 				System.out.print("CHOOSE FROM ABOVE LIST :");
 				
-					int play = sc.nextInt();
+				int play = sc.nextInt();
 					
 				if(play == 1)
 				{
@@ -666,7 +666,7 @@ class Spotify{
 				}
 				else
 				{
-			System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
+					System.out.println("CHOOSE THE SONG WITHIN THE OPTIONS ONLY!!!!");
 				}
 				
 				} 

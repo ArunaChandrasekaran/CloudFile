@@ -1,0 +1,3 @@
+        <TableView fx:id="recordsTable" styleClass="module-list-table"
+                   VBox.vgrow="ALWAYS" maxHeight="Infinity"
+                   columnResizePolicy="CONSTRAINED_RESIZE_POLICY">

@@ -1,0 +1,2 @@
+                            <StackPane fx:id="materialsChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260"/>

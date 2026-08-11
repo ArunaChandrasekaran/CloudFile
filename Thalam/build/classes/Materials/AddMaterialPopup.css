@@ -1,0 +1,187 @@
+/* Compact Add Material popup dialog */
+
+.material-popup {
+    -fx-background-color: #F5F5F5;
+    -fx-spacing: 0;
+    -fx-padding: 0 24 0 24;
+}
+
+.material-popup-header {
+    -fx-padding: 20 0 12 0;
+    -fx-background-color: #F5F5F5;
+}
+
+.material-popup-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #222222;
+}
+
+.material-popup-tagline {
+    -fx-font-size: 13px;
+    -fx-text-fill: #888888;
+}
+
+.material-popup-body {
+    -fx-padding: 16 20;
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-max-width: Infinity;
+}
+
+.material-popup-footer {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 14 0 18 0;
+}
+
+.module-form-grid {
+    -fx-hgap: 16;
+    -fx-vgap: 16;
+}
+
+.module-form-field-block {
+    -fx-spacing: 6;
+    -fx-alignment: TOP_LEFT;
+    -fx-max-width: Infinity;
+}
+
+.module-form-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #555555;
+}
+
+.module-form-required {
+    -fx-text-fill: #E53935;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+}
+
+.module-form-input {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+    -fx-padding: 10 14;
+    -fx-pref-height: 44;
+    -fx-min-height: 44;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #A0A0A0;
+    -fx-max-width: Infinity;
+}
+
+.module-form-input:focused {
+    -fx-border-color: #F57C1F;
+    -fx-border-width: 1.5px;
+}
+
+.module-form-combo {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+    -fx-padding: 4 8 4 12;
+    -fx-pref-height: 44;
+    -fx-min-height: 44;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-max-width: Infinity;
+}
+
+.module-form-combo:focused {
+    -fx-border-color: #F57C1F;
+    -fx-border-width: 1.5px;
+}
+
+.module-form-combo .list-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.text-area.module-form-textarea,
+.module-form-textarea {
+    -fx-control-inner-background: white;
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #A0A0A0;
+    -fx-pref-height: 88;
+    -fx-min-height: 88;
+    -fx-max-height: 88;
+    -fx-max-width: Infinity;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-wrap-text: true;
+}
+
+.module-form-notes {
+    -fx-pref-height: 88;
+    -fx-min-height: 88;
+    -fx-max-height: 88;
+}
+
+.text-area.module-form-textarea > .scroll-pane,
+.module-form-textarea > .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+}
+
+.text-area.module-form-textarea .content,
+.module-form-textarea .content {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 8 12;
+}
+
+.button.module-form-btn-cancel,
+.module-form-btn-cancel,
+.button.module-form-btn-save,
+.module-form-btn-save {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 10;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+    -fx-border-width: 1.5px;
+    -fx-padding: 10 22;
+    -fx-pref-height: 42;
+    -fx-cursor: hand;
+    -fx-effect: null;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.button.module-form-btn-cancel:hover,
+.module-form-btn-cancel:hover,
+.button.module-form-btn-save:hover,
+.module-form-btn-save:hover,
+.button.module-form-btn-cancel:focused,
+.module-form-btn-cancel:focused,
+.button.module-form-btn-save:focused,
+.module-form-btn-save:focused {
+    -fx-background-color: #F57C1F;
+    -fx-text-fill: white;
+    -fx-border-color: #F57C1F;
+}
+
+.button.module-form-btn-cancel:armed,
+.module-form-btn-cancel:armed,
+.button.module-form-btn-save:armed,
+.module-form-btn-save:armed {
+    -fx-background-color: #D8631A;
+    -fx-text-fill: white;
+    -fx-border-color: #D8631A;
+}

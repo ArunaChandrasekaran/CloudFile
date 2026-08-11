@@ -1,0 +1,83 @@
+                    <HBox styleClass="reports-charts-row" maxWidth="Infinity" spacing="14">
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS"
+                              minWidth="0" prefWidth="10000" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Project Progress" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="projectProgressHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS"
+                              minWidth="0" prefWidth="10000" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Budget vs Spend" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="budgetSpendChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS">
+                                <Label fx:id="budgetSpendEmptyLabel" text="No budget / spend data"
+                                       styleClass="reports-chart-placeholder-label"
+                                       StackPane.alignment="CENTER"/>
+                                <VBox fx:id="budgetSpendContent" styleClass="reports-budget-box"
+                                      visible="false" managed="false" maxWidth="Infinity" maxHeight="Infinity"
+                                      StackPane.alignment="CENTER">
+                                    <HBox styleClass="reports-budget-row" maxWidth="Infinity">
+                                        <Label text="Budget" styleClass="reports-budget-label" HBox.hgrow="ALWAYS"
+                                               maxWidth="Infinity"/>
+                                        <Label fx:id="budgetValueLabel" text="—" styleClass="reports-budget-value"/>
+                                    </HBox>
+                                    <HBox styleClass="reports-budget-row" maxWidth="Infinity">
+                                        <Label text="Spend" styleClass="reports-budget-label" HBox.hgrow="ALWAYS"
+                                               maxWidth="Infinity"/>
+                                        <Label fx:id="spendValueLabel" text="—" styleClass="reports-budget-value"/>
+                                    </HBox>
+                                    <HBox styleClass="reports-budget-row" maxWidth="Infinity">
+                                        <Label text="Remaining" styleClass="reports-budget-label" HBox.hgrow="ALWAYS"
+                                               maxWidth="Infinity"/>
+                                        <Label fx:id="remainingValueLabel" text="—" styleClass="reports-budget-value"/>
+                                    </HBox>
+                                    <ProgressBar fx:id="budgetSpendProgress" progress="0"
+                                                 styleClass="reports-progress-bar" maxWidth="Infinity"/>
+                                    <Label fx:id="budgetSpendPercentLabel" text=""
+                                           styleClass="reports-progress-detail"/>
+                                </VBox>
+                            </StackPane>
+                        </VBox>
+                    </HBox>
+
+                    <HBox styleClass="reports-charts-row" maxWidth="Infinity" spacing="14">
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS"
+                              minWidth="0" prefWidth="10000" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Purchases" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="purchasesChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS"
+                              minWidth="0" prefWidth="10000" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Profit &amp; Loss" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="profitLossChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox styleClass="reports-charts-row" maxWidth="Infinity" spacing="14">
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS"
+                              minWidth="0" prefWidth="10000" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Expenses" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="expensesChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS"
+                              minWidth="0" prefWidth="10000" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Invoices" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="invoicesChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                    </HBox>

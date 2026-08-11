@@ -1,0 +1,66 @@
+                <VBox styleClass="reports-detail-content" maxWidth="Infinity" spacing="16">
+
+                    <VBox styleClass="reports-chart-card" maxWidth="Infinity"
+                          minHeight="280" prefHeight="280" maxHeight="280">
+                        <HBox styleClass="reports-card-header" maxWidth="Infinity" spacing="12"
+                              alignment="CENTER_LEFT">
+                            <Label text="Material Overview" styleClass="reports-chart-title"
+                                   HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                            <Label text="Project" styleClass="reports-filter-label"/>
+                            <ComboBox fx:id="materialProjectCombo" styleClass="reports-filter-combo"
+                                      prefWidth="220" promptText="Select project"/>
+                        </HBox>
+                        <HBox spacing="12" maxWidth="Infinity" maxHeight="Infinity" alignment="CENTER"
+                              VBox.vgrow="ALWAYS">
+                            <VBox styleClass="reports-material-tile danger" HBox.hgrow="ALWAYS"
+                                  style="-fx-background-color: #FDECEA; -fx-background-radius: 14; -fx-background-insets: 0;">
+                                <StackPane styleClass="reports-material-icon-wrap"
+                                           minWidth="48" prefWidth="48" maxWidth="48"
+                                           minHeight="48" prefHeight="48" maxHeight="48"
+                                           style="-fx-background-color: #F5B5B0; -fx-background-radius: 24;"/>
+                                <Label fx:id="materialOutOfStockValue" text="0" styleClass="reports-material-value"
+                                       style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #E53935;"/>
+                                <Label text="Out of Stock" styleClass="reports-material-label"
+                                       style="-fx-text-fill: #E53935;"/>
+                            </VBox>
+                            <VBox styleClass="reports-material-tile warning" HBox.hgrow="ALWAYS"
+                                  style="-fx-background-color: #FFF0E6; -fx-background-radius: 14; -fx-background-insets: 0;">
+                                <StackPane styleClass="reports-material-icon-wrap"
+                                           minWidth="48" prefWidth="48" maxWidth="48"
+                                           minHeight="48" prefHeight="48" maxHeight="48"
+                                           style="-fx-background-color: #FFD0A8; -fx-background-radius: 24;"/>
+                                <Label fx:id="materialLowStockValue" text="0" styleClass="reports-material-value"
+                                       style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #F57C1F;"/>
+                                <Label text="Low Stock" styleClass="reports-material-label"
+                                       style="-fx-text-fill: #F57C1F;"/>
+                            </VBox>
+                            <VBox styleClass="reports-material-tile info" HBox.hgrow="ALWAYS"
+                                  style="-fx-background-color: #E3F2FD; -fx-background-radius: 14; -fx-background-insets: 0;">
+                                <StackPane styleClass="reports-material-icon-wrap"
+                                           minWidth="48" prefWidth="48" maxWidth="48"
+                                           minHeight="48" prefHeight="48" maxHeight="48"
+                                           style="-fx-background-color: #A8D4F5; -fx-background-radius: 24;"/>
+                                <Label fx:id="materialNearLowStockValue" text="0" styleClass="reports-material-value"
+                                       style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #1E88E5;"/>
+                                <Label text="Near Low Stock" styleClass="reports-material-label"
+                                       style="-fx-text-fill: #1E88E5;"/>
+                            </VBox>
+                            <VBox styleClass="reports-material-tile success" HBox.hgrow="ALWAYS"
+                                  style="-fx-background-color: #E8F5E9; -fx-background-radius: 14; -fx-background-insets: 0;">
+                                <StackPane styleClass="reports-material-icon-wrap"
+                                           minWidth="48" prefWidth="48" maxWidth="48"
+                                           minHeight="48" prefHeight="48" maxHeight="48"
+                                           style="-fx-background-color: #A8DBB0; -fx-background-radius: 24;"/>
+                                <Label fx:id="materialInStockValue" text="0" styleClass="reports-material-value"
+                                       style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #43A047;"/>
+                                <Label text="In Stock" styleClass="reports-material-label"
+                                       style="-fx-text-fill: #43A047;"/>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+                    <HBox styleClass="reports-charts-row" maxWidth="Infinity" spacing="14">
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS"
+                              minWidth="0" prefWidth="10000" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Project Progress" styleClass="reports-chart-title"/>

@@ -1,0 +1,1 @@
+        <TableView fx:id="recordsTable" styleClass="module-list-table"

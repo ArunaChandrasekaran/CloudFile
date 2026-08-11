@@ -1,0 +1,318 @@
+/* Login - Inter/.root from theme + page styles */
+
+
+
+.root {
+    -fx-font-family: "Inter";
+    -fx-font-size: 16px;
+    -fx-background-color: #F2F2F2;
+}
+
+.label,
+.button,
+.text-field,
+.password-field,
+.text-area,
+.text-input,
+.combo-box,
+.combo-box .list-cell,
+.check-box,
+.table-view,
+.table-view .label,
+.hyperlink {
+    -fx-font-family: "Inter";
+}
+
+/* Login — full-bleed background, compact centered card (1920 x 1080) */
+
+.login-root {
+     -fx-background-color: #1a120c;
+    -fx-background-image: url("../Assets/Images/Login-Background.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.footer-brand-block {
+    -fx-padding: 4 0 0 0;
+    -fx-alignment: CENTER;
+}
+
+.thalam-brand-lockup {
+    -fx-alignment: CENTER;
+    -fx-spacing: 8;
+}
+
+.thalam-brand-copy {
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 1;
+}
+
+.thalam-brand-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+    -fx-text-fill: white;
+    -fx-letter-spacing: 1.8px;
+}
+
+.thalam-brand-tagline {
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-font-style: italic;
+    -fx-text-fill: white;
+    -fx-opacity: 0.92;
+    -fx-padding: 1 0 0 0;
+}
+
+/* ----- Compact card (height = content only) ----- */
+.login-card {
+    -fx-background-color: rgba(255, 255, 255, 0.97);
+    -fx-background-radius: 18;
+    -fx-padding: 32 36 28 36;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.28), 40, 0, 0, 16);
+    -fx-spacing: 18;
+}
+
+.login-user-avatar {
+    -fx-effect: null;
+}
+
+.welcome-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1F1F1F;
+}
+
+.welcome-hint {
+    -fx-font-size: 13px;
+    -fx-text-fill: #8A8A8A;
+}
+
+.input-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #666666;
+    -fx-letter-spacing: 0.6px;
+}
+
+.custom-textfield {
+    -fx-background-color: #FAFAFA;
+    -fx-border-color: #E4E4E4;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 12 14;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2A2A2A;
+    -fx-prompt-text-fill: #A8A8A8;
+    -fx-pref-height: 46;
+}
+
+.custom-textfield:focused {
+    -fx-background-color: white;
+    -fx-border-color: #F57C1F;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(245, 124, 31, 0.22), 10, 0, 0, 0);
+    -fx-prompt-text-fill: #A8A8A8;
+}
+
+.custom-textfield .prompt-text {
+    -fx-fill: #A8A8A8;
+    -fx-text-fill: #A8A8A8;
+}
+
+/* TextArea — same chrome as .custom-textfield (strip Modena nested scroll look) */
+.text-area.custom-textarea,
+.custom-textarea {
+    -fx-control-inner-background: #FAFAFA;
+    -fx-background-color: #E4E4E4, #FAFAFA;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 10, 9;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2A2A2A;
+    -fx-prompt-text-fill: #A8A8A8;
+    -fx-pref-height: 96;
+    -fx-min-height: 96;
+    -fx-max-height: 96;
+    -fx-max-width: Infinity;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-wrap-text: true;
+}
+
+.text-area.custom-textarea:focused,
+.custom-textarea:focused {
+    -fx-control-inner-background: white;
+    -fx-background-color: #F57C1F, white;
+    -fx-background-insets: 0, 1.5;
+    -fx-background-radius: 10, 8.5;
+    -fx-effect: dropshadow(three-pass-box, rgba(245, 124, 31, 0.22), 10, 0, 0, 0);
+}
+
+.text-area.custom-textarea > .scroll-pane,
+.custom-textarea > .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: null;
+}
+
+.text-area.custom-textarea .scroll-pane .viewport,
+.custom-textarea .scroll-pane .viewport,
+.text-area.custom-textarea .scroll-pane .corner,
+.custom-textarea .scroll-pane .corner {
+    -fx-background-color: transparent;
+}
+
+.text-area.custom-textarea .content,
+.custom-textarea .content {
+    -fx-background-color: transparent;
+    -fx-background-radius: 9;
+    -fx-background-insets: 0;
+    -fx-padding: 10 12;
+}
+
+/* PasswordField always has .password-field — match username chrome */
+.password-field,
+.password-field.custom-textfield {
+    -fx-background-color: #FAFAFA;
+    -fx-border-color: #E4E4E4;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 12 14;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2A2A2A;
+    -fx-prompt-text-fill: #A8A8A8;
+    -fx-pref-height: 46;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.password-field:focused,
+.password-field.custom-textfield:focused {
+    -fx-background-color: white;
+    -fx-border-color: #F57C1F;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(245, 124, 31, 0.22), 10, 0, 0, 0);
+    -fx-prompt-text-fill: #A8A8A8;
+}
+
+.button.password-toggle-btn {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: null;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-content-display: GRAPHIC_ONLY;
+    -fx-alignment: CENTER;
+    -fx-min-width: 40;
+    -fx-pref-width: 40;
+    -fx-max-width: 40;
+    -fx-min-height: 46;
+    -fx-pref-height: 46;
+    -fx-max-height: 46;
+}
+
+.button.password-toggle-btn:hover,
+.button.password-toggle-btn:armed,
+.button.password-toggle-btn:focused {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.button.password-toggle-btn .image-view {
+    -fx-fit-width: 20;
+    -fx-fit-height: 20;
+}
+
+/* Flat primary button — no Modena gray */
+.button.login-btn {
+    -fx-background-color: #F57C1F;
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(245, 124, 31, 0.35), 14, 0, 0, 4);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: 800;
+    -fx-font-size: 15px;
+    -fx-padding: 12 0;
+    -fx-pref-height: 48;
+    -fx-cursor: hand;
+}
+
+.button.login-btn:hover {
+    -fx-background-color: #E06E16;
+    -fx-background-insets: 0;
+}
+
+.button.login-btn:armed {
+    -fx-background-color: #C45F12;
+    -fx-background-insets: 0;
+}
+
+.button.login-btn:focused {
+    -fx-background-color: #F57C1F;
+    -fx-background-insets: 0;
+}
+
+/* ----- Forgot password / Sign up ----- */
+.forgot-password-link {
+    -fx-font-size: 13px;
+    -fx-text-fill: #F57C1F;
+    -fx-underline: false;
+    -fx-padding: 2 0 0 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.forgot-password-link:hover,
+.forgot-password-link:focused,
+.forgot-password-link:visited {
+    -fx-text-fill: #D8631A;
+    -fx-underline: false;
+}
+
+.signup-line {
+    -fx-alignment: CENTER;
+    -fx-padding: 2 0 0 0;
+}
+
+.signup-prompt {
+    -fx-font-size: 15px;
+    -fx-text-fill: #888888;
+}
+
+.signup-link {
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #F57C1F;
+    -fx-underline: false;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.signup-link:hover,
+.signup-link:focused,
+.signup-link:visited {
+    -fx-text-fill: #D8631A;
+    -fx-underline: false;
+}

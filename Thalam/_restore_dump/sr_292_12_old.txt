@@ -1,0 +1,2 @@
+            <columns>
+                <TableColumn text="Report Name" minWidth="160"/>

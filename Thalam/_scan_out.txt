@@ -1,0 +1,5 @@
+﻿Files: 25
+Tags: 39
+Child props: 11
+TAG_LIST: AnchorPane,BorderPane,Button,CheckBox,columnConstraints,ColumnConstraints,columnResizePolicy,columns,ComboBox,DatePicker,FlowPane,FXCollections,graphic,GridPane,HBox,Hyperlink,image,Image,ImageView,Insets,items,Label,left,ListView,padding,PasswordField,Region,right,rowConstraints,RowConstraints,ScrollPane,StackPane,String,TableColumn,TableView,TextArea,TextField,value,VBox
+PROP_LIST: columnConstraints,columnResizePolicy,columns,graphic,image,items,left,padding,right,rowConstraints,value

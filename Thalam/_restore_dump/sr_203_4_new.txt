@@ -1,0 +1,2 @@
+        <TableView fx:id="recordsTable" styleClass="module-list-table"
+                   VBox.vgrow="ALWAYS" maxHeight="Infinity">

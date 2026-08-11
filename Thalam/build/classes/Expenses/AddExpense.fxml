@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefWidth="1920.0" prefHeight="1080.0"
+      minWidth="1024.0" minHeight="640.0"
+      maxWidth="Infinity" maxHeight="Infinity"
+      stylesheets="@AddExpense.css"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Expenses.AddExpenseController">
+        <HBox maxWidth="Infinity" maxHeight="Infinity"
+            AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+        <StackPane styleClass="sidebar">
+            <VBox styleClass="sidebar-body" StackPane.alignment="TOP_LEFT">
+                <VBox styleClass="sidebar-brand">
+                    <HBox styleClass="brand-row">
+                        <ImageView fitWidth="40.0" fitHeight="40.0" preserveRatio="true"
+                                   styleClass="brand-logo">
+                            <image>
+                                <Image url="@../Assets/Images/thalam-logo.png"/>
+                            </image>
+                        </ImageView>
+                        <VBox styleClass="brand-copy">
+                            <Label text="THALAM" styleClass="brand-title"/>
+                            <Label text="The Builder's Foundation" styleClass="brand-tagline"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <VBox styleClass="nav" VBox.vgrow="ALWAYS">
+                    <HBox styleClass="nav-item">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavDashboard"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/dashboard.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Dashboard" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <HBox styleClass="nav-item">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavClients"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/clients.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Clients" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <VBox styleClass="nav-section">
+                        <HBox styleClass="nav-item">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavProjectsList"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <HBox styleClass="nav-content" mouseTransparent="true">
+                                        <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                            <image>
+                                                <Image url="@../Assets/Images/projects.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Projects" styleClass="nav-label" HBox.hgrow="ALWAYS"/>
+                                        <Region styleClass="nav-caret"/>
+                                    </HBox>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <VBox styleClass="nav-kids" visible="false" managed="false">
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavProjectsList"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Projects List" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavDailyWorklog"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Daily Worklogs" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        </VBox>
+                    </VBox>
+                    <HBox styleClass="nav-item-current">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavExpenses"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/expenses_highlighted.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Expenses" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <HBox styleClass="nav-item">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavInvoices"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/invoices.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Invoices" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <VBox styleClass="nav-section">
+                        <HBox styleClass="nav-item">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavVendors"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <HBox styleClass="nav-content" mouseTransparent="true">
+                                        <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                            <image>
+                                                <Image url="@../Assets/Images/inventory.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Inventory" styleClass="nav-label" HBox.hgrow="ALWAYS"/>
+                                        <Region styleClass="nav-caret"/>
+                                    </HBox>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <VBox styleClass="nav-kids" visible="false" managed="false">
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavVendors"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Vendors" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavMaterials"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Materials" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavPurchases"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Purchases" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        </VBox>
+                    </VBox>
+                    <VBox styleClass="nav-section">
+                        <HBox styleClass="nav-item">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavEmployees"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <HBox styleClass="nav-content" mouseTransparent="true">
+                                        <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                            <image>
+                                                <Image url="@../Assets/Images/employees.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Employees" styleClass="nav-label" HBox.hgrow="ALWAYS"/>
+                                        <Region styleClass="nav-caret"/>
+                                    </HBox>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <VBox styleClass="nav-kids" visible="false" managed="false">
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavEmployees"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Employee List" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavRoles"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Roles" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        </VBox>
+                    </VBox>
+                    <HBox styleClass="nav-item">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavReports"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/reports.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Reports" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </StackPane>
+
+<VBox HBox.hgrow="ALWAYS" maxWidth="Infinity" maxHeight="Infinity" styleClass="main-column" minHeight="0.0">
+
+                <HBox styleClass="main-header">
+                    <Button text="Logout" styleClass="header-logout" mnemonicParsing="false" focusTraversable="false" onAction="#onLogout"/>
+                </HBox>
+
+        <VBox styleClass="module-form-page" VBox.vgrow="ALWAYS" minWidth="0.0" minHeight="0.0" maxHeight="Infinity">
+
+    <VBox styleClass="module-form-top">
+        <Label fx:id="formTitleLabel" text="Add Expenses" styleClass="module-form-title"/>
+        <Label fx:id="formTaglineLabel" text="Enter the expense details to add a new expense." styleClass="module-form-tagline"/>
+    </VBox>
+
+    <ScrollPane fx:id="formScroll" styleClass="module-form-scroll"
+                VBox.vgrow="ALWAYS"
+                hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
+        <VBox styleClass="module-form-card" spacing="24" maxWidth="Infinity">
+            <GridPane styleClass="module-form-grid">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50" hgrow="ALWAYS"/>
+                    <ColumnConstraints percentWidth="50" hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <VBox styleClass="module-form-field-block" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label text="Date" styleClass="module-form-label"/>
+                    <DatePicker fx:id="datePicker" styleClass="module-form-datepicker"
+                                promptText="Select date" maxWidth="Infinity"/>
+                </VBox>
+
+                <VBox styleClass="module-form-field-block" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <HBox spacing="0">
+                        <Label text="Expense Type " styleClass="module-form-label"/>
+                        <Label text="*" styleClass="module-form-required"/>
+                    </HBox>
+                    <ComboBox fx:id="expenseTypeCombo" styleClass="module-form-combo"
+                              promptText="Select expense type" maxWidth="Infinity"/>
+                </VBox>
+
+                <VBox fx:id="conditionalLinkHost"
+                      GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2"
+                      managed="false" visible="false" maxWidth="Infinity" spacing="0">
+                    <VBox fx:id="projectSection" styleClass="module-form-field-block"
+                          managed="false" visible="false" maxWidth="Infinity">
+                        <HBox spacing="0">
+                            <Label text="Project " styleClass="module-form-label"/>
+                            <Label text="*" styleClass="module-form-required"/>
+                        </HBox>
+                        <ComboBox fx:id="projectCombo" styleClass="module-form-combo"
+                                  promptText="Select project" maxWidth="Infinity"/>
+                    </VBox>
+                </VBox>
+
+                <VBox styleClass="module-form-field-block" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label text="Category" styleClass="module-form-label"/>
+                    <ComboBox fx:id="categoryCombo" styleClass="module-form-combo"
+                              promptText="Select category" maxWidth="Infinity"/>
+                </VBox>
+
+                <VBox styleClass="module-form-field-block" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <HBox spacing="0">
+                        <Label text="Amount " styleClass="module-form-label"/>
+                        <Label text="*" styleClass="module-form-required"/>
+                    </HBox>
+                    <HBox fx:id="amountWrap" styleClass="module-form-currency" maxWidth="Infinity"
+                          alignment="CENTER_LEFT">
+                        <Label text="₹" styleClass="module-form-currency-prefix"/>
+                        <TextField fx:id="amountField" styleClass="module-form-currency-input"
+                                   promptText="Enter amount" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                    </HBox>
+                </VBox>
+            </GridPane>
+
+            <VBox spacing="12" maxWidth="Infinity">
+                <CheckBox fx:id="markAsPaidCheck" text="Mark as Paid" styleClass="module-form-checkbox"/>
+                <VBox fx:id="paymentModeSection" styleClass="module-form-field-block"
+                      managed="false" visible="false" maxWidth="360">
+                    <HBox spacing="0">
+                        <Label text="Payment Mode " styleClass="module-form-label"/>
+                        <Label text="*" styleClass="module-form-required"/>
+                    </HBox>
+                    <ComboBox fx:id="paymentModeCombo" styleClass="module-form-combo"
+                              promptText="Select payment mode" maxWidth="Infinity"/>
+                </VBox>
+            </VBox>
+
+            <VBox styleClass="module-form-field-block" maxWidth="Infinity">
+                <Label text="Notes" styleClass="module-form-label"/>
+                <TextArea fx:id="notesField" styleClass="text-area module-form-textarea module-form-notes"
+                          wrapText="true" promptText="Enter notes"/>
+            </VBox>
+        </VBox>
+    </ScrollPane>
+
+    <BorderPane styleClass="module-form-footer" maxWidth="Infinity">
+        <left>
+            <Button fx:id="cancelButton" text="Cancel" styleClass="module-form-btn-cancel"
+                mnemonicParsing="false" onAction="#onCancel"/>
+        </left>
+        <right>
+            <Button fx:id="saveButton" text="Save" styleClass="module-form-btn-save"
+                mnemonicParsing="false" onAction="#onSave"/>
+        </right>
+    </BorderPane>
+</VBox>
+    </VBox>
+    </HBox>
+
+</AnchorPane>

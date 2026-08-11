@@ -1,0 +1,2 @@
+        <Label fx:id="listSectionTitleLabel" text="Reports List" styleClass="module-list-section-title"/>
+        <TableView fx:id="recordsTable" styleClass="module-list-table"

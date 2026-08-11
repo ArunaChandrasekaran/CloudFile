@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefWidth="1920.0" prefHeight="1080.0"
+      minWidth="1024.0" minHeight="640.0"
+      maxWidth="Infinity" maxHeight="Infinity"
+      stylesheets="@dashboard.css"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Dashboard.DashboardController">
+        <HBox maxWidth="Infinity" maxHeight="Infinity"
+            AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+        <StackPane styleClass="sidebar">
+            <VBox styleClass="sidebar-body" StackPane.alignment="TOP_LEFT">
+                <VBox styleClass="sidebar-brand">
+                    <HBox styleClass="brand-row">
+                        <ImageView fitWidth="40.0" fitHeight="40.0" preserveRatio="true"
+                                   styleClass="brand-logo">
+                            <image>
+                                <Image url="@../Assets/Images/thalam-logo.png"/>
+                            </image>
+                        </ImageView>
+                        <VBox styleClass="brand-copy">
+                            <Label text="THALAM" styleClass="brand-title"/>
+                            <Label text="The Builder's Foundation" styleClass="brand-tagline"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <VBox styleClass="nav" VBox.vgrow="ALWAYS">
+                    <HBox styleClass="nav-item-current">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavDashboard"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/dashboard_highlighted.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Dashboard" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <HBox styleClass="nav-item">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavClients"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/clients.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Clients" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <VBox styleClass="nav-section">
+                        <HBox styleClass="nav-item">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavProjectsList"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <HBox styleClass="nav-content" mouseTransparent="true">
+                                        <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                            <image>
+                                                <Image url="@../Assets/Images/projects.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Projects" styleClass="nav-label" HBox.hgrow="ALWAYS"/>
+                                        <Region styleClass="nav-caret"/>
+                                    </HBox>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <VBox styleClass="nav-kids" visible="false" managed="false">
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavProjectsList"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Projects List" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavDailyWorklog"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Daily Worklogs" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        </VBox>
+                    </VBox>
+                    <HBox styleClass="nav-item">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavExpenses"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/expenses.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Expenses" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <HBox styleClass="nav-item">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavInvoices"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/invoices.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Invoices" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <VBox styleClass="nav-section">
+                        <HBox styleClass="nav-item">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavVendors"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <HBox styleClass="nav-content" mouseTransparent="true">
+                                        <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                            <image>
+                                                <Image url="@../Assets/Images/inventory.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Inventory" styleClass="nav-label" HBox.hgrow="ALWAYS"/>
+                                        <Region styleClass="nav-caret"/>
+                                    </HBox>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <VBox styleClass="nav-kids" visible="false" managed="false">
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavVendors"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Vendors" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavMaterials"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Materials" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavPurchases"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Purchases" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        </VBox>
+                    </VBox>
+                    <VBox styleClass="nav-section">
+                        <HBox styleClass="nav-item">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavEmployees"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <HBox styleClass="nav-content" mouseTransparent="true">
+                                        <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                            <image>
+                                                <Image url="@../Assets/Images/employees.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Employees" styleClass="nav-label" HBox.hgrow="ALWAYS"/>
+                                        <Region styleClass="nav-caret"/>
+                                    </HBox>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <VBox styleClass="nav-kids" visible="false" managed="false">
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavEmployees"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Employee List" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        <HBox styleClass="nav-child">
+                            <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                       mnemonicParsing="false" focusTraversable="false" onAction="#onNavRoles"
+                                       alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <graphic>
+                                    <Label text="Roles" styleClass="nav-sub-label" mouseTransparent="true"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                        </VBox>
+                    </VBox>
+                    <HBox styleClass="nav-item">
+                        <Button text="" styleClass="nav-action" HBox.hgrow="ALWAYS"
+                                   mnemonicParsing="false" focusTraversable="false" onAction="#onNavReports"
+                                   alignment="CENTER_LEFT" maxWidth="Infinity">
+                            <graphic>
+                                <HBox styleClass="nav-content" mouseTransparent="true">
+                                    <ImageView fitWidth="20.0" fitHeight="20.0" preserveRatio="true" smooth="true" styleClass="nav-icon">
+                                        <image>
+                                            <Image url="@../Assets/Images/reports.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                        </image>
+                                    </ImageView>
+                                    <Label text="Reports" styleClass="nav-label"/>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </StackPane>
+
+<VBox HBox.hgrow="ALWAYS" maxWidth="Infinity" maxHeight="Infinity"
+      minWidth="0.0" minHeight="0.0" styleClass="main-column">
+
+                <HBox styleClass="main-header" maxWidth="Infinity" minWidth="0.0">
+                    <Region HBox.hgrow="ALWAYS" minWidth="0.0"/>
+                    <Button text="Logout" styleClass="header-logout" mnemonicParsing="false" focusTraversable="false" onAction="#onLogout"/>
+                </HBox>
+
+        <ScrollPane fitToWidth="true" fitToHeight="true"
+            hbarPolicy="NEVER" vbarPolicy="AS_NEEDED"
+            styleClass="page-scroll" VBox.vgrow="ALWAYS"
+            maxWidth="Infinity" maxHeight="Infinity"
+            minWidth="0.0" minHeight="0.0">
+    <VBox styleClass="content-area" spacing="18"
+          maxWidth="Infinity" maxHeight="Infinity" minWidth="0.0" minHeight="0.0">
+
+        <HBox spacing="16" maxWidth="Infinity" styleClass="stat-row">
+            <HBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="14" alignment="CENTER_LEFT"
+                  onMouseClicked="#onTotalProjectsClick">
+                <StackPane styleClass="stat-icon-wrap stat-icon-orange"
+                           minWidth="58" prefWidth="58" maxWidth="58"
+                           minHeight="58" prefHeight="58" maxHeight="58"
+                           style="-fx-background-color: #FFE4CC; -fx-background-radius: 29; -fx-background-insets: 0;">
+                    <ImageView fitWidth="26.0" fitHeight="26.0"
+                               preserveRatio="true" smooth="true" styleClass="stat-icon-image">
+                        <image>
+                            <Image url="@../Assets/Images/projects.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                        </image>
+                    </ImageView>
+                </StackPane>
+                <VBox spacing="2" HBox.hgrow="ALWAYS">
+                    <Label text="Total projects" styleClass="stat-label"/>
+                    <Label fx:id="totalProjectsValue" text="—" styleClass="stat-value"
+                           style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #111111;"/>
+                </VBox>
+            </HBox>
+            <HBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="14" alignment="CENTER_LEFT"
+                  onMouseClicked="#onTotalClientsClick">
+                <StackPane styleClass="stat-icon-wrap stat-icon-red"
+                           minWidth="58" prefWidth="58" maxWidth="58"
+                           minHeight="58" prefHeight="58" maxHeight="58"
+                           style="-fx-background-color: #FFD6D3; -fx-background-radius: 29; -fx-background-insets: 0;">
+                    <ImageView fitWidth="26.0" fitHeight="26.0"
+                               preserveRatio="true" smooth="true" styleClass="stat-icon-image">
+                        <image>
+                            <Image url="@../Assets/Images/clients.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                        </image>
+                    </ImageView>
+                </StackPane>
+                <VBox spacing="2" HBox.hgrow="ALWAYS">
+                    <Label text="Total Clients" styleClass="stat-label"/>
+                    <Label fx:id="totalClientsValue" text="—" styleClass="stat-value"
+                           style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #111111;"/>
+                </VBox>
+            </HBox>
+            <HBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="14" alignment="CENTER_LEFT"
+                  onMouseClicked="#onEmployeesStatClick">
+                <StackPane styleClass="stat-icon-wrap stat-icon-green"
+                           minWidth="58" prefWidth="58" maxWidth="58"
+                           minHeight="58" prefHeight="58" maxHeight="58"
+                           style="-fx-background-color: #D9F0DB; -fx-background-radius: 29; -fx-background-insets: 0;">
+                    <ImageView fitWidth="26.0" fitHeight="26.0"
+                               preserveRatio="true" smooth="true" styleClass="stat-icon-image">
+                        <image>
+                            <Image url="@../Assets/Images/employees.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                        </image>
+                    </ImageView>
+                </StackPane>
+                <VBox spacing="2" HBox.hgrow="ALWAYS">
+                    <Label text="Employees" styleClass="stat-label"/>
+                    <Label fx:id="employeesValue" text="—" styleClass="stat-value"
+                           style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #111111;"/>
+                </VBox>
+            </HBox>
+            <HBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="14" alignment="CENTER_LEFT"
+                  onMouseClicked="#onPendingExpensesClick">
+                <StackPane styleClass="stat-icon-wrap stat-icon-orange"
+                           minWidth="58" prefWidth="58" maxWidth="58"
+                           minHeight="58" prefHeight="58" maxHeight="58"
+                           style="-fx-background-color: #FFE4CC; -fx-background-radius: 29; -fx-background-insets: 0;">
+                    <ImageView fitWidth="26.0" fitHeight="26.0"
+                               preserveRatio="true" smooth="true" styleClass="stat-icon-image">
+                        <image>
+                            <Image url="@../Assets/Images/expenses.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                        </image>
+                    </ImageView>
+                </StackPane>
+                <VBox spacing="2" HBox.hgrow="ALWAYS">
+                    <Label text="Pending Expenses" styleClass="stat-label"/>
+                    <Label fx:id="pendingExpensesValue" text="—" styleClass="stat-value"
+                           style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #111111;"/>
+                </VBox>
+            </HBox>
+            <HBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="14" alignment="CENTER_LEFT"
+                  onMouseClicked="#onPendingInvoicesClick">
+                <StackPane styleClass="stat-icon-wrap stat-icon-blue"
+                           minWidth="58" prefWidth="58" maxWidth="58"
+                           minHeight="58" prefHeight="58" maxHeight="58"
+                           style="-fx-background-color: #D0E8FC; -fx-background-radius: 29; -fx-background-insets: 0;">
+                    <ImageView fitWidth="26.0" fitHeight="26.0"
+                               preserveRatio="true" smooth="true" styleClass="stat-icon-image">
+                        <image>
+                            <Image url="@../Assets/Images/invoices.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                        </image>
+                    </ImageView>
+                </StackPane>
+                <VBox spacing="2" HBox.hgrow="ALWAYS">
+                    <Label text="Pending Invoices" styleClass="stat-label"/>
+                    <Label fx:id="pendingInvoicesValue" text="—" styleClass="stat-value"
+                           style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #111111;"/>
+                </VBox>
+            </HBox>
+        </HBox>
+
+        <GridPane hgap="18" vgap="0" maxWidth="Infinity" maxHeight="Infinity"
+                  styleClass="dash-row" VBox.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="58" hgrow="ALWAYS" minWidth="320"/>
+                <ColumnConstraints percentWidth="42" hgrow="ALWAYS" minWidth="300"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS" minHeight="220"/>
+            </rowConstraints>
+
+            <VBox styleClass="dash-card" spacing="16" maxWidth="Infinity" maxHeight="Infinity"
+                  GridPane.columnIndex="0" GridPane.hgrow="ALWAYS"
+                  GridPane.valignment="TOP" GridPane.vgrow="ALWAYS"
+                  onMouseClicked="#onMaterialOverviewClick">
+                <HBox styleClass="card-header" spacing="12" alignment="CENTER_LEFT">
+                    <Label text="Material Overview" styleClass="card-title"/>
+                    <ComboBox fx:id="materialProjectCombo" styleClass="dash-material-project-combo"
+                              prefWidth="200" promptText="Select project"
+                              onMouseClicked="#onMaterialProjectComboClick"/>
+                    <Region HBox.hgrow="ALWAYS" minWidth="8"/>
+                    <Hyperlink text="view All" styleClass="view-all-link" onAction="#onViewAllMaterials"/>
+                </HBox>
+                <HBox spacing="12" maxWidth="Infinity" maxHeight="Infinity" alignment="CENTER"
+                      VBox.vgrow="ALWAYS">
+                    <VBox styleClass="material-tile danger" HBox.hgrow="ALWAYS"
+                          alignment="CENTER" minHeight="150" onMouseClicked="#onMaterialTileClick"
+                          style="-fx-background-color: #FDECEA; -fx-background-radius: 14; -fx-background-insets: 0;">
+                        <StackPane styleClass="material-icon-wrap danger"
+                                   minWidth="52" prefWidth="52" maxWidth="52"
+                                   minHeight="52" prefHeight="52" maxHeight="52"
+                                   style="-fx-background-color: #F5B5B0; -fx-background-radius: 26; -fx-background-insets: 0;">
+                            <ImageView fitWidth="28.0" fitHeight="28.0"
+                                       preserveRatio="true" smooth="true" styleClass="material-icon">
+                                <image>
+                                    <Image url="@../Assets/Images/reports.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                </image>
+                            </ImageView>
+                        </StackPane>
+                        <Label fx:id="outOfStockValue" text="—" styleClass="material-value"
+                               alignment="CENTER"
+                               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #E53935;"/>
+                        <Label text="Out of Stock" styleClass="material-label" alignment="CENTER"/>
+                    </VBox>
+                    <VBox styleClass="material-tile warning" HBox.hgrow="ALWAYS"
+                          alignment="CENTER" minHeight="150" onMouseClicked="#onMaterialTileClick"
+                          style="-fx-background-color: #FFF0E6; -fx-background-radius: 14; -fx-background-insets: 0;">
+                        <StackPane styleClass="material-icon-wrap warning"
+                                   minWidth="52" prefWidth="52" maxWidth="52"
+                                   minHeight="52" prefHeight="52" maxHeight="52"
+                                   style="-fx-background-color: #FFD0A8; -fx-background-radius: 26; -fx-background-insets: 0;">
+                            <ImageView fitWidth="28.0" fitHeight="28.0"
+                                       preserveRatio="true" smooth="true" styleClass="material-icon">
+                                <image>
+                                    <Image url="@../Assets/Images/expenses.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                </image>
+                            </ImageView>
+                        </StackPane>
+                        <Label fx:id="lowStockValue" text="—" styleClass="material-value"
+                               alignment="CENTER"
+                               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #F57C1F;"/>
+                        <Label text="Low Stock" styleClass="material-label" alignment="CENTER"/>
+                    </VBox>
+                    <VBox styleClass="material-tile info" HBox.hgrow="ALWAYS"
+                          alignment="CENTER" minHeight="150" onMouseClicked="#onMaterialTileClick"
+                          style="-fx-background-color: #E3F2FD; -fx-background-radius: 14; -fx-background-insets: 0;">
+                        <StackPane styleClass="material-icon-wrap info"
+                                   minWidth="52" prefWidth="52" maxWidth="52"
+                                   minHeight="52" prefHeight="52" maxHeight="52"
+                                   style="-fx-background-color: #A8D4F5; -fx-background-radius: 26; -fx-background-insets: 0;">
+                            <ImageView fitWidth="28.0" fitHeight="28.0"
+                                       preserveRatio="true" smooth="true" styleClass="material-icon">
+                                <image>
+                                    <Image url="@../Assets/Images/dashboard.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                </image>
+                            </ImageView>
+                        </StackPane>
+                        <Label fx:id="nearRestockValue" text="—" styleClass="material-value"
+                               alignment="CENTER"
+                               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1E88E5;"/>
+                        <Label text="Near restock" styleClass="material-label" alignment="CENTER"/>
+                    </VBox>
+                    <VBox styleClass="material-tile success" HBox.hgrow="ALWAYS"
+                          alignment="CENTER" minHeight="150" onMouseClicked="#onMaterialTileClick"
+                          style="-fx-background-color: #E8F5E9; -fx-background-radius: 14; -fx-background-insets: 0;">
+                        <StackPane styleClass="material-icon-wrap success"
+                                   minWidth="52" prefWidth="52" maxWidth="52"
+                                   minHeight="52" prefHeight="52" maxHeight="52"
+                                   style="-fx-background-color: #A8DBB0; -fx-background-radius: 26; -fx-background-insets: 0;">
+                            <ImageView fitWidth="28.0" fitHeight="28.0"
+                                       preserveRatio="true" smooth="true" styleClass="material-icon">
+                                <image>
+                                    <Image url="@../Assets/Images/inventory.png" requestedWidth="64" requestedHeight="64" preserveRatio="true"/>
+                                </image>
+                            </ImageView>
+                        </StackPane>
+                        <Label fx:id="inStockValue" text="—" styleClass="material-value"
+                               alignment="CENTER"
+                               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #43A047;"/>
+                        <Label text="In Stock" styleClass="material-label" alignment="CENTER"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <VBox styleClass="dash-card" spacing="12" maxWidth="Infinity" maxHeight="Infinity"
+                  GridPane.columnIndex="1" GridPane.hgrow="ALWAYS"
+                  GridPane.valignment="TOP" GridPane.vgrow="ALWAYS"
+                  onMouseClicked="#onRecentActivitiesClick">
+                <HBox styleClass="card-header">
+                    <Label text="Recent Activities" styleClass="card-title" HBox.hgrow="ALWAYS"
+                           maxWidth="Infinity"/>
+                    <Hyperlink text="view All" styleClass="view-all-link" onAction="#onViewAllActivities"/>
+                </HBox>
+                <VBox fx:id="recentActivitiesBox" styleClass="recent-activities-list"
+                      spacing="0" alignment="TOP_LEFT" maxWidth="Infinity" maxHeight="Infinity"
+                      minHeight="160" VBox.vgrow="ALWAYS"/>
+            </VBox>
+        </GridPane>
+
+        <GridPane hgap="18" vgap="0" maxWidth="Infinity" maxHeight="Infinity"
+                  styleClass="dash-row" VBox.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="58" hgrow="ALWAYS" minWidth="320"/>
+                <ColumnConstraints percentWidth="42" hgrow="ALWAYS" minWidth="300"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS" minHeight="320"/>
+            </rowConstraints>
+
+            <VBox styleClass="dash-card" spacing="12" maxWidth="Infinity" maxHeight="Infinity"
+                  GridPane.columnIndex="0" GridPane.hgrow="ALWAYS"
+                  GridPane.valignment="TOP" GridPane.vgrow="ALWAYS"
+                  onMouseClicked="#onOverdueInvoicesClick">
+                <HBox styleClass="card-header">
+                    <Label text="Overdue Invoices" styleClass="card-title" HBox.hgrow="ALWAYS"
+                           maxWidth="Infinity"/>
+                    <Hyperlink text="view All" styleClass="view-all-link" onAction="#onViewAllInvoices"/>
+                </HBox>
+                <HBox styleClass="overdue-header-row" alignment="CENTER_LEFT" spacing="8">
+                    <Label text="Clients" styleClass="overdue-col-header" HBox.hgrow="ALWAYS"
+                           maxWidth="Infinity"/>
+                    <Label text="Invoice no" styleClass="overdue-col-header" prefWidth="110"
+                           minWidth="90"/>
+                    <Label text="Due Date" styleClass="overdue-col-header" prefWidth="100"
+                           minWidth="80"/>
+                    <Label text="Amount" styleClass="overdue-col-header" prefWidth="100"
+                           minWidth="80" alignment="CENTER_RIGHT"
+                           maxWidth="100"/>
+                </HBox>
+                <VBox fx:id="overdueInvoicesBox" styleClass="overdue-body"
+                      alignment="TOP_LEFT" maxWidth="Infinity" maxHeight="Infinity"
+                      minHeight="180" spacing="0" VBox.vgrow="ALWAYS"/>
+                <HBox styleClass="overdue-total-bar" alignment="CENTER_LEFT" spacing="12">
+                    <Label text="TOTAL OVERDUE AMOUNT" styleClass="overdue-total-label" HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="totalOverdueAmountValue" text="—"
+                           styleClass="overdue-total-value"/>
+                </HBox>
+            </VBox>
+
+            <VBox styleClass="dash-card" spacing="12" maxWidth="Infinity" maxHeight="Infinity"
+                  GridPane.columnIndex="1" GridPane.hgrow="ALWAYS"
+                  GridPane.valignment="TOP" GridPane.vgrow="ALWAYS"
+                  onMouseClicked="#onUnpaidPurchasesClick">
+                <HBox styleClass="card-header">
+                    <Label text="Unpaid Purchases" styleClass="card-title" HBox.hgrow="ALWAYS"
+                           maxWidth="Infinity"/>
+                    <Hyperlink text="view All" styleClass="view-all-link" onAction="#onViewAllPurchases"/>
+                </HBox>
+                <HBox styleClass="overdue-header-row" alignment="CENTER_LEFT" spacing="8">
+                    <Label text="Vendor" styleClass="overdue-col-header" HBox.hgrow="ALWAYS"
+                           maxWidth="Infinity"/>
+                    <Label text="Purchase no" styleClass="overdue-col-header" prefWidth="110"
+                           minWidth="90"/>
+                    <Label text="Date" styleClass="overdue-col-header" prefWidth="100"
+                           minWidth="80"/>
+                    <Label text="Amount" styleClass="overdue-col-header" prefWidth="100"
+                           minWidth="80" alignment="CENTER_RIGHT"
+                           maxWidth="100"/>
+                </HBox>
+                <VBox fx:id="unpaidPurchasesBox" styleClass="overdue-body"
+                      alignment="TOP_LEFT" maxWidth="Infinity" maxHeight="Infinity"
+                      minHeight="180" spacing="0" VBox.vgrow="ALWAYS"/>
+                <HBox styleClass="overdue-total-bar" alignment="CENTER_LEFT" spacing="12">
+                    <Label text="TOTAL UNPAID AMOUNT" styleClass="overdue-total-label" HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="totalUnpaidPurchasesValue" text="—"
+                           styleClass="overdue-total-value"/>
+                </HBox>
+            </VBox>
+        </GridPane>
+    </VBox>
+</ScrollPane>
+    </VBox>
+    </HBox>
+
+</AnchorPane>

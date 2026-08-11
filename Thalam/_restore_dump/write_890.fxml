@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fx:id="reportsRoot"
+            fitToWidth="true"
+            hbarPolicy="NEVER" vbarPolicy="AS_NEEDED"
+            maxWidth="Infinity" maxHeight="Infinity"
+            style="-fx-background-color: transparent; -fx-background: #F5F5F5;"
+            stylesheets="@../Assets/StyleSheets/theme.css,@../Assets/StyleSheets/module-form.css,@reports.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Reports.ReportsController">
+
+    <VBox styleClass="reports-page" spacing="20" maxWidth="Infinity">
+        <!-- Title left + date-range dropdown right -->
+        <HBox fx:id="reportsHeader" styleClass="reports-header" alignment="CENTER_LEFT"
+              maxWidth="Infinity" spacing="16">
+            <VBox spacing="4" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+                <Label text="Reports" styleClass="reports-title"/>
+                <Label text="Choose a report type to view summaries and details."
+                       styleClass="reports-tagline"/>
+            </VBox>
+            <VBox fx:id="dateRangeHost" styleClass="reports-date-header" alignment="CENTER_RIGHT"
+                  spacing="8"/>
+        </HBox>
+
+        <HBox fx:id="reportTypeNav" styleClass="reports-type-nav" maxWidth="Infinity"/>
+
+        <VBox fx:id="reportContentHost" spacing="16" maxWidth="Infinity" VBox.vgrow="ALWAYS"/>
+    </VBox>
+</ScrollPane>

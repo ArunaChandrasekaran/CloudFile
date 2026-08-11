@@ -1,0 +1,49 @@
+                    <HBox styleClass="reports-charts-row" maxWidth="Infinity" spacing="14">
+                        <VBox styleClass="reports-chart-card reports-material-overview" HBox.hgrow="ALWAYS"
+                              maxWidth="Infinity" minHeight="320" prefHeight="320" maxHeight="320"
+                              spacing="14">
+                            <HBox styleClass="reports-card-header">
+                                <Label text="Material Overview" styleClass="reports-chart-title"
+                                       HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                                <Hyperlink text="view All" styleClass="reports-view-all-link"
+                                           onAction="#onViewAllMaterials"/>
+                            </HBox>
+                            <HBox spacing="10" maxWidth="Infinity" alignment="CENTER" VBox.vgrow="ALWAYS">
+                                <VBox styleClass="material-tile danger" HBox.hgrow="ALWAYS">
+                                    <Label fx:id="outOfStockValue" text="—"
+                                           styleClass="material-value placeholder-value"/>
+                                    <Label text="Out of Stock" styleClass="material-label"/>
+                                </VBox>
+                                <VBox styleClass="material-tile warning" HBox.hgrow="ALWAYS">
+                                    <Label fx:id="lowStockValue" text="—"
+                                           styleClass="material-value placeholder-value"/>
+                                    <Label text="Low Stock" styleClass="material-label"/>
+                                </VBox>
+                                <VBox styleClass="material-tile info" HBox.hgrow="ALWAYS">
+                                    <Label fx:id="nearRestockValue" text="—"
+                                           styleClass="material-value placeholder-value"/>
+                                    <Label text="Nearby Low Stock" styleClass="material-label"/>
+                                </VBox>
+                                <VBox styleClass="material-tile success" HBox.hgrow="ALWAYS">
+                                    <Label fx:id="inStockValue" text="—"
+                                           styleClass="material-value placeholder-value"/>
+                                    <Label text="In Stock" styleClass="material-label"/>
+                                </VBox>
+                            </HBox>
+                        </VBox>
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Purchases" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="purchasesChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                    </HBox>
+
+                    <VBox styleClass="reports-chart-card" maxWidth="Infinity"
+                          minHeight="320" prefHeight="320" maxHeight="320">
+                        <Label text="Budget vs Spend" styleClass="reports-chart-title"/>
+                        <StackPane fx:id="budgetSpendChartHost" styleClass="reports-chart-host"
+                                   maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                   VBox.vgrow="ALWAYS"/>
+                    </VBox>

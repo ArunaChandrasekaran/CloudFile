@@ -1,0 +1,16 @@
+                    <HBox styleClass="reports-charts-row" maxWidth="Infinity" spacing="14">
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Purchases" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="purchasesChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Budget vs Spend" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="budgetSpendChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260" maxHeight="260"
+                                       VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                    </HBox>

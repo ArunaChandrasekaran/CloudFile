@@ -1,0 +1,7 @@
+                <VBox styleClass="reports-detail-content" maxWidth="Infinity" spacing="16">
+
+                    <HBox styleClass="reports-charts-row" maxWidth="Infinity" spacing="14">
+                        <VBox styleClass="reports-chart-card" HBox.hgrow="ALWAYS"
+                              minWidth="0" prefWidth="10000" maxWidth="Infinity"
+                              minHeight="320" prefHeight="320" maxHeight="320">
+                            <Label text="Project Progress" styleClass="reports-chart-title"/>

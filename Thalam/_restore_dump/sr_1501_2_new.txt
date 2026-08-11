@@ -1,0 +1,3 @@
+                            <Label text="Materials (Top 12)" styleClass="reports-chart-title"/>
+                            <StackPane fx:id="materialsChartHost" styleClass="reports-chart-host"
+                                       maxWidth="Infinity" minHeight="260" prefHeight="260"/>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+
+<body>
+
+    <h2>Student Form</h2>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" id="age">
+        <br><br>
+
+        <label>City:</label>
+        <input type="text" id="city">
+        <br><br>
+
+        <label>Course:</label>
+        <select id="course">
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+        </select>
+        <br><br>
+
+        <button type="button" onclick="addStudent()">Submit</button>
+    </form>
+
+    <br>
+
+    <table border="1" id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Course</th>
+        </tr>
+    </table>
+
+    <script>
+
+        function addStudent() {
+
+            // Retrieve form data
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let city = document.getElementById("city").value;
+            let course = document.getElementById("course").value;
+
+            // Get table
+            let table = document.getElementById("studentTable");
+
+            // Create new row
+            let row = table.insertRow();
+
+            // Add cells
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+
+            // Insert data
+            cell1.innerText = name;
+            cell2.innerText = age;
+            cell3.innerText = city;
+            cell4.innerText = course;
+        }
+
+    </script>
+
+</body>
+</html>

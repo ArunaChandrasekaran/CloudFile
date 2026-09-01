@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        ul {
+            width: 350px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        li {
+            padding: 8px;
+            margin: 5px;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>My Task List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter a task">
+
+    <button id="addBtn">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+
+    <script>
+
+        // Get elements from DOM
+        const taskInput = document.getElementById("taskInput");
+        const addBtn = document.getElementById("addBtn");
+        const taskList = document.getElementById("taskList");
+
+
+        // Function to add task
+        function addTask() {
+
+            // Get input value
+            let task = taskInput.value;
+
+            // Check if input is not empty
+            if (task.trim() === "") {
+                alert("Please enter a task");
+                return;
+            }
+
+            // Create new li
+            const li = document.createElement("li");
+
+            // Set task text
+            li.innerText = task;
+
+            // Add li to ul
+            taskList.appendChild(li);
+
+            // Clear input
+            taskInput.value = "";
+
+            // Put cursor back into input
+            taskInput.focus();
+        }
+
+
+        // Add task when button is clicked
+        addBtn.addEventListener("click", addTask);
+
+
+        // Add task when Enter key is pressed
+        taskInput.addEventListener("keydown", function(event) {
+
+            if (event.key === "Enter") {
+                addTask();
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

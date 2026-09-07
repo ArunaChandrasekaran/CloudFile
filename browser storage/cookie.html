@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookies</title>
+
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Cookie Theme</h2>
+
+    <button onclick="setTheme('light')">Light</button>
+    <button onclick="setTheme('dark')">Dark</button>
+
+    <script>
+        function setTheme(theme) {
+            document.cookie = "theme=" + theme + "; max-age=604800; path=/";
+            applyTheme(theme);
+        }
+
+        function getTheme() {
+            let cookies = document.cookie.split("; ");
+
+            for (let cookie of cookies) {
+                let [key, value] = cookie.split("=");
+
+                if (key === "theme") {
+                    return value;
+                }
+            }
+
+            return "light";
+        }
+
+        function applyTheme(theme) {
+            if (theme === "dark") {
+                document.body.classList.add("dark");
+            } else {
+                document.body.classList.remove("dark");
+            }
+        }
+
+        // Apply saved theme when page reloads
+        applyTheme(getTheme());
+    </script>
+
+</body>
+</html>

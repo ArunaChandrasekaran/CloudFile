@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Storage</title>
+</head>
+<body>
+
+    <h2>Session Storage Counter</h2>
+
+    <h3 id="count">0</h3>
+
+    <button onclick="increaseCounter()">Click Me</button>
+
+    <script>
+        let count = sessionStorage.getItem("count") || 0;
+
+        document.getElementById("count").innerText = count;
+
+        function increaseCounter() {
+            count++;
+
+            sessionStorage.setItem("count", count);
+
+            document.getElementById("count").innerText = count;
+        }
+    </script>
+
+</body>
+</html>
